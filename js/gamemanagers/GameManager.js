@@ -1,46 +1,3 @@
-game.GameTimerManager = Object.extend({
-    init: function (x, y, settings) {
-        this.now = new Date().getTime();
-        this.lastCreep = new Date().getTime();
-        this.paused = false;
-        this.alwaysUpdate = true;
-    },
-    update: function () {
-        this.now = new Date().getTime();
-        this.goldTimerCheck();
-        this.alwaysTimerCheck();
-
-        return  true;
-    },
-    goldTimerCheck: function () {
-        if (Math.round(this.now / 1000) % 20 === 0 && (this.now - this.lastCreep >= 1000)) {
-            game.data.gold += (game.data.exp1 + 1);
-            console.log("curret gold: " + game.data.gold);
-        }
-    },
-    creepTimerCheck: function () {
-        if (Math.round(this.now / 1000) % 10 === 0 && (this.now - this.lastCreep >= 1000))
-            this.lastCreep = this.now;
-        var creepe = me.pool.pull("EnemyCreep", 1000, 0, {});
-        me.game.world.addChild(creep, 5);
-
-    }
-});
-
-game.HeroDeathManager = Object.extend({
-    init: function (x, y, setting) {
-        this.alwaysUpdate = true;
-    },
-    update: function () {
-        if (game.data.player.dead) {
-            me.game.world.removeChild(game.data.player);
-            me.state.current().resetPlayer(10, 0);
-        }
-
-        return true;
-    }
-});
-
 game.ExperienceManager = Object.extend({
     init: function (x, y, settings) {
         this.alwaysUpdate = true;
@@ -150,6 +107,7 @@ game.SpendGold = Object.extend({
         me.input.unbindKey(me.input.KEY.F6, "F6", true);
         me.game.world.removeChild(game.data.buyText);
     },
+    
     checkBuyKeys: function () {
         if (me.input.isKeyPressed("F1")) {
             if (this.checkCost(1)) {
@@ -177,11 +135,46 @@ game.SpendGold = Object.extend({
             }
         }
     },
+    
     checkCost: function (skill) {
-
+       if(skill===1 && (game.data.gold >= ((game.data.skill1+1)*10))){
+        return true;
+      }else if(skill===2 &&  (game.data.gold >= ((game.data.skill2+1)*10))){
+        return true;
+      }else if(skill===3 &&  (game.data.gold >= ((game.data.skill3+1)*10))){
+        return true;
+      }else if(skill===4 &&  (game.data.gold >= ((game.data.ability1+1)*10))){
+        return true;
+      }else if(skill===5 &&  (game.data.gold >= ((game.data.ability2+1)*10))){
+        return true;
+      }else if(skill===6 &&  (game.data.gold >= ((game.data.ability3+1)*10))){
+        return true;
+      }else{
+          return false;
+      }
     },
+    
     makePurchase: function (skill) {
-
+       if(skill === 1){
+        game.data.gold -= ((game.data.skill1 +1)* 10);
+        game.data.skill1 += 1;
+        game.data.player.atttack += 1;
+      }else if(skill ===2){
+         game.data.gold -= ((game.data.skill2 +1)* 10);
+         game.data.skill1 += 1;
+      }else if(skill ===3){
+         game.data.gold -= ((game.data.skill3 +1)* 10);
+         game.data.skill1 += 1;
+      }else if(skill ===4){
+         game.data.gold -= ((game.data.ability1 +1)* 10);
+         game.data.ability1+= 1;
+      }else if(skill ===5){
+         game.data.gold -= ((game.data.ability2 +1)* 10);
+         game.data.ability2 += 1;
+      }else if(skill ===6){
+         game.data.gold -= ((game.data.ability3 +1)* 10);
+         game.data.ability3 += 1;
+      }
     }
 });
 
