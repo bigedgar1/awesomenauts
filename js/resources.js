@@ -11,10 +11,18 @@ game.resources = [
         {name: "creep1", type:"image", src: "data/img/brainmonster.png"},
         {name: "title-screen", type:"image", src: "data/img/title.png"},
         {name: "exp-screen", type:"image", src: "data/img/loadpic.png"},
-        {name: "gold-screen", type:"image", src: "data/img/spend.png"},
-        
+        {name: "gold-screen", type:"image", src: "data/img/spend.png"}, 
+        {name: "spear", type:"image", src: "data/img/spear.png"},
+        {name: "sandtiles", type:"image", src: "data/img/sandtiles.png"},          
+        {name: "woodpieces", type:"image", src: "data/img/woodpieces.png"},
+        {name: "treetiles", type:"image", src: "data/img/treetiles.png"},
+        {name: "AwesomenautsBG", type:"image", src: "data/img/AwesomenautsBG.png"},                
+        {name: "minimap", type:"image", src: "data/img/minimap.png"},
+        {name: "load-screen", type:"image", src: "data/img/loadpic.png"},
+        {name: "new-screen", type:"image", src: "data/img/newpic.png"},
+              
 	/* Atlases 
-	 * @example
+	 * @exampes
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
 	 */
 		
