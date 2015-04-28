@@ -54,7 +54,7 @@ game.EnemyCreep = me.Entity.extend(  {
     collideHandler: function(response){
         if(response.b.type==='PlayerBase'){
            this.attacking=true;
-          //  this.lastAttack=this.now;
+          // this.lastAttack=this.now;
            this.body.vel.x =0;
            //keep moving the creep to the right to right to maintain its position
            this.pos.x  = this.pos.x + 1;

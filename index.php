@@ -15,6 +15,24 @@
 	<body>
 		<!-- Canvas placeholder -->
 		<div id="screen"></div>
+                
+        <from id="input" method="post">
+            <div class="field">
+                <label for="username">Username</label>
+                <input type='text' name='username' id='username' autocomplete='off'>
+                
+            </div>
+            
+            <div class='password'>
+                <label for='password'>Password</label>
+                <input type='text' name='password' id='passwoord'>
+            </div>    
+            
+            <button type='button' id='register'>Register</button>
+            <button type='button' id='load'>Load</button>
+            <button type='button' id='mainmenu'>Main</button>
+            
+        </from>
 
 		<!-- melonJS Library -->
 		<!-- build:js js/app.min.js -->
@@ -31,11 +49,10 @@
                      <script type="text/javascript" src="js/entities/EnemyBaseEntity.js"></script>
                      <script type="text/javascript" src="js/entities/PlayerBaseEntity.js"></script>
                      <script type="text/javascript" src="js/gamemanagers/GameManager.js"></script>
-                     <script type="text/javascript" src="js/gamemanagers/GameTimerManager.js"></script>
+                     <script type="text/javascript" src="js/gamemanagers/GameTimeManager.js"></script>
                      <script type="text/javascript" src="js/gamemanagers/SpendGold.js"></script>
                      <script type="text/javascript" src="js/gamemanagers/HeroDeathManager.js"></script>
-                     <script type="text/javascript" src="js/entities//EnemyCreep.js"></script>
-                     <script type="text/javascript" src="js/entities//SpearThow.js"></script>
+                     <script type="text/javascript" src="js/entities/EnemyCreep.js"></script>
                      <script type="text/javascript" src="js/screens/title.js"></script>
                      <script type="text/javascript" src="js/screens/play.js"></script>
                      <script type="text/javascript" src="js/screens/spendExp.js"></script>
