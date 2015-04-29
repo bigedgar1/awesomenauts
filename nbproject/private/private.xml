@@ -4,14 +4,16 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/edgarrawesomenauts/index.css</file>
+            <file>file:/C:/xampp/htdocs/edgarrawesomenauts/php/controller/create-user.php</file>
             <file>file:/C:/xampp/htdocs/edgarrawesomenauts/js/game.js</file>
-            <file>file:/C:/xampp/htdocs/edgarrawesomenauts/js/resources.js</file>
-            <file>file:/C:/xampp/htdocs/edgarrawesomenauts/js/screens/spendExp.js</file>
+            <file>file:/C:/xampp/htdocs/edgarrawesomenauts/php/controller/create-db.php</file>
             <file>file:/C:/xampp/htdocs/edgarrawesomenauts/js/screens/newProfile.js</file>
             <file>file:/C:/xampp/htdocs/edgarrawesomenauts/js/screens/title.js</file>
+            <file>file:/C:/xampp/htdocs/edgarrawesomenauts/php/controller/save-user.php</file>
+            <file>file:/C:/xampp/htdocs/edgarrawesomenauts/php/model/config.php</file>
             <file>file:/C:/xampp/htdocs/edgarrawesomenauts/index.php</file>
             <file>file:/C:/xampp/htdocs/edgarrawesomenauts/js/screens/loadProfile.js</file>
-            <file>file:/C:/xampp/htdocs/edgarrawesomenauts/js/screens/play.js</file>
+            <file>file:/C:/xampp/htdocs/edgarrawesomenauts/php/controller/login-user.php</file>
         </group>
     </open-files>
 </project-private>

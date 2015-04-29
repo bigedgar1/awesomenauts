@@ -2,11 +2,10 @@ game.TitleScreen = me.ScreenObject.extend({
 	/**	
 	 *  action to perform on state change
 	 */
-	onResetEvent: function() {	
-		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage('title-screen')), -10); // TODo
-                game.data.option1 = new (me.Renderable.extend({
-                    
+	onResetEvent: function() {
+		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage('title-screen')), -10); 
                 
+                   game.data.option1 = new (me.Renderable.extend({
                     init: function(){
                         this._super(me.Renderable, 'init', [270, 240, 300, 50]);
                         this.font = new me.Font("Arial", 46,  "white");
@@ -25,7 +24,7 @@ game.TitleScreen = me.ScreenObject.extend({
                     newGame: function(){
                         me.input.releasePointerEvent('pointerdown', this);
                         me.input.releasePointerEvent('pointerdown', game.data.option2);
-                        me.state.change(me.state.PLAY);
+                        me.state.change(me.state.NEW);
              
                         
                     }
@@ -53,7 +52,7 @@ game.TitleScreen = me.ScreenObject.extend({
                     newGame: function(){
                         me.input.releasePointerEvent('pointerdown', this);
                         me.input.releasePointerEvent('pointerdown', game.data.option1);
-                        me.state.change(me.state.SPENDEXP);                       
+                        me.state.change(me.state.LOAD);                       
                     }
                 }));
                 
