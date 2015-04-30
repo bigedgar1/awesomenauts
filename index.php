@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+
 <html>
 	<head>
 		<title>melonJS Template</title>
